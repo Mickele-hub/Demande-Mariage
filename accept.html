@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Demande de mariage</title>
+</head>
+<body>
+<div class="w-full h-full">
+    <img class=" items-center justify-items-center" src="bague.png" alt="" style="margin: auto;">
+    <p class="text-center text-2xl text-pink-400">Veux tu m'épousez ?</p>
+    <div class="mt-4 md:mt-7" style="text-align: center;">
+        <a href="index.html" class="bg-pink-400 rounded-3xl py-3 px-10 font-medium inline-block mr-4 text-white hover:bg-transparent hover:border-pink-400 hover:text-pink-400 hover:scale-110 duration-300 hover:border">OUI</a>
+        <div class="inline-block mr-4">
+            <a href="#" id="btn" class="bg-pink-400 rounded-3xl py-3 px-10 font-medium inline-block mr-4 text-white hover:bg-transparent hover:border-pink-400  hover:text-pink-400  hover:scale-110 duration-300 hover:border">NON</a>
+        </div>
+    </div>
+</div>
+<script>
+    let btn = document.querySelector("#btn");
+    let position;
+    btn.addEventListener("mouseover", () => {
+        position ? (position = 0) : (position = 200);
+        btn.style.transform = `translate(${position}px, 0)`;
+        btn.style.transition = "all 0.2s";
+    })
+</script>
+    
+</body>
+</html>
